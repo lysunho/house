@@ -1,0 +1,22 @@
+{
+  "name": "lhouse",
+  "version": "1.0.0",
+  "description": "a house project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lysunho/house.git"
+  },
+  "keywords": [
+    "lhouse"
+  ],
+  "author": "lysun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lysunho/house/issues"
+  },
+  "homepage": "https://github.com/lysunho/house#readme"
+}
