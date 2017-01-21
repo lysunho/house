@@ -1,3 +1,6 @@
+<style lang="stylus" scoped>
+</style>
+
 <template>
 	<div>
 		<my-header hasBack="1" title="登录" />

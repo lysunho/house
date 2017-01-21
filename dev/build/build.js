@@ -6,7 +6,7 @@ env.NODE_ENV = 'production'
 var path = require('path')
 var config = require('../config')
 var ora = require('ora')
-var webpack = require('webpack')//打包工具
+var webpack = require('webpack')
 var webpackConfig = require('./webpack.prod.conf')
 
 console.log(
@@ -19,9 +19,12 @@ var spinner = ora('building for production...')
 spinner.start()
 
 var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
-rm('-rf', assetsPath)//移除
-mkdir('-p', assetsPath)//创建
-cp('-R', 'static/*', assetsPath)//拷贝
+rm("-rf", path.resolve(assetsPath, "./images/public"));
+mv(path.resolve(assetsPath, "./images"), path.resolve(assetsPath, "../"));
+rm('-rf', assetsPath)
+mkdir('-p', assetsPath)
+mv(path.resolve(assetsPath, "../images"), path.resolve(assetsPath, "./images"))
+cp('-R', 'static/*', assetsPath)
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()
