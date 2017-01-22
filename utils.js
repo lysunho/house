@@ -22,6 +22,4 @@ export const createHTML= async ({title,styles,scripts,path}) =>
 				${await readFileAsync(path)}
 				${scripts.map(item=> `<script src="${item}"></script>`).join("\n\t\t")}
 			</body>
-		</html>
-
-	`;
+		</html>`;

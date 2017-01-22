@@ -5,7 +5,7 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../../pages/index.html'),
-    assetsRoot: path.resolve(__dirname, '../../static'),//拼装路径
+    assetsRoot: path.resolve(__dirname, '../../static'),
     assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: 0,
@@ -23,12 +23,12 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         "/api/": {
-            target: "http://127.0.0.1:23333",
+            target: "http://127.0.0.1:16102",
             changeOrigin: true,
             cookieDomainRewrite: "http://127.0.0.1:8888"
         },
         "/images/": {
-            target: "http://127.0.0.1:23333",
+            target: "http://127.0.0.1:16102",
             changeOrigin: true
         }
     },

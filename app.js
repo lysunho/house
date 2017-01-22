@@ -4,6 +4,10 @@ import session from "express-session";
 import {SERVER_CONFIG} from "./config";
 import {l, createHTML} from "./utils";
 express()
+	.all((req,res,next)=>{
+		console.log(req.path);
+		next();
+	})
 	.use(express.static("./static"))
 	.use(session({
 		secret: "house",
